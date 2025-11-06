@@ -43,8 +43,8 @@ function Footer() {
           <h4>Socials</h4>
           <ul>
             <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.instagram.com/tianyu_075/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://github.com/tianyu-075" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -81,7 +81,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 打字动画
+
   useEffect(() => {
     let currentIndex = 0;
 
@@ -108,7 +108,7 @@ function App() {
     };
   }, []);
 
-  // Sticky bar (所有页面共用)
+  // Sticky bar 
   const stickyBar = (
     <header className={`sticky-header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-content">
@@ -153,7 +153,7 @@ function App() {
   </header>
 );
 
-  // 页面切换逻辑
+
   const renderPage = () => {
     switch (currentPage) {
       case 'cv':
@@ -169,7 +169,7 @@ function App() {
       
         return (
           <main className="main-content">
-            {/* 打字动画 */}
+            
             <section>
               <div className="typing-container">
                 <div className="typing-animation">
@@ -178,7 +178,7 @@ function App() {
                 </div>
               </div>
 
-              {/* CV 按钮 */}
+              
               <div id="about" className="cvcontainer">
                 <img
                   className="codinganime-gif"
@@ -193,7 +193,7 @@ function App() {
                 />
               </div>
 
-              {/* 项目 1 */}
+              
               <div id="project" className="project2container">
                 <div className="center-container">
                   <img
@@ -213,7 +213,7 @@ function App() {
                 </div>
               </div>
 
-              {/* 项目 2 */}
+              
               <div className="project3">
                 <div className="project3-left">
                   <img
@@ -243,7 +243,7 @@ function App() {
                 </div>
               </div>
 
-              {/* 项目 3 */}
+              
               <div className="image-container">
                 <img
                   className="hadouken-gif"
@@ -276,7 +276,6 @@ function App() {
     
 
 
-  {/* 右边：NES风格的联系卡片 */}
   <div className="contact-right">
     <div className="nes-card">
       <h3>📧 Contact Me</h3>
