@@ -1,0 +1,182 @@
+/* 整体背景与布局 */
+body {
+  background-color: #fff;
+
+  color: #333;
+
+}
+
+.portfolio-main {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* 上方布局 */
+.portfolio-up {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  background-color: #fdfdfd;
+  border: 3px solid #212529;
+  box-shadow: 4px 4px 0 #212529;
+  padding: 20px;
+}
+
+.portfolio-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* 移除 NES 容器边框与阴影 */
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+  background: #fff !important; /* 保留白底 */
+}
+
+/* 为上方整体区块增加留白和柔和的布局 */
+.portfolio-up {
+  padding: 40px;
+  background: #fff;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  border-radius: 12px;
+}
+
+/* 右侧标题和内容 */
+.portfolio-right h2 {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+/* Overview 部分的段落样式 */
+.overview-box p {
+  line-height: 1.8;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+
+.portfolio-video {
+  width: 100%;
+  max-width: 400px;
+  border: 3px solid #212529;
+}
+
+.portfolio-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* 带框介绍块 */
+.info-box {
+  
+  padding: 20px;
+  background-color: #fff;
+}
+
+h3{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #212529;
+  font-family: monospace;
+  margin-top: auto;
+    margin-bottom: auto;
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 25px;
+  line-height: 1.8;
+}
+
+
+.lists {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.lists ul {
+  line-height: 1.8;
+  color: #222;
+}
+
+.info-box {
+  border: 3px solid #212529;
+  box-shadow: 3px 3px 0 #212529;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #212529;
+  font-size: 1.4rem;
+  font-family: monospace;
+}
+
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+  background: #fff !important; /* 保留白底 */
+}
+
+/* 让文字保持 NES 的像素感 */
+.overview-box p {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-box button {
+  margin-top: 20px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .portfolio-up {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-video {
+    max-width: 300px;
+  }
+
+  .portfolio-right {
+    text-align: center;
+  }
+
+  .info-box {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,27 @@
+.buttonCard {
+  background-color: #0e4b78;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-family: monospace;
+  cursor: pointer;
+  display: flex;
+
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+
+.cardContent{
+  display: flex  ;
+      justify-content: space-between;
+      flex-direction: column;
+     
+
+
+
+}
+.buttonCard:hover {
+  transform: translateY(-5px);
+}
+

@@ -1,0 +1,159 @@
+@use "sass:list";
+
+// === Pixelize mixin (Sass 3.0+ 语法) ===
+@mixin pixelize($size, $matrix, $colors, $default-color: null) {
+  $ret: "";
+  $moz: "";
+
+  @if $default-color == null {
+    $matrix-colors: ();
+    $counts: ();
+    @each $row in $matrix {
+      @each $item in $row {
+        @if $item != 0 {
+          $index: list.index($matrix-colors, $item);
+          @if not $index {
+            $matrix-colors: list.append($matrix-colors, $item);
+            $counts: list.append($counts, 1);
+          } @else {
+            $count: list.nth($counts, $index) + 1;
+            $counts: list.set-nth($counts, $index, $count);
+          }
+        }
+      }
+    }
+    $default-color: list.nth(
+      $colors,
+      list.nth($matrix-colors, list.index($counts, max($counts...)))
+    );
+  }
+
+  @for $i from 1 through list.length($matrix) {
+    $row: list.nth($matrix, $i);
+
+    @for $j from 1 through list.length($row) {
+      $dot: list.nth($row, $j);
+
+      @if $dot != 0 {
+        @if $ret != "" {
+          $ret: $ret + ",";
+          $moz: $moz + ",";
+        }
+
+        $color: list.nth($colors, $dot);
+        @if $color == $default-color {
+          $ret: $ret + ($j * $size) + " " + ($i * $size);
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
+        } @else {
+          $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
+        }
+      }
+    }
+  }
+
+  width: $size;
+  height: $size;
+  color: $default-color;
+  box-shadow: unquote($ret);
+
+  @supports (-moz-appearance: meterbar) {
+    box-shadow: unquote($moz);
+  }
+}
+
+// === Layout styles ===
+.github-link {
+  position: fixed;
+  top: 200px;
+  right: -240px;
+  z-index: 999;
+  display: flex;
+  height: 100px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &.active {
+    right: 10px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+
+
+  
+
+
+  > i.nes-octocat {
+    align-self: flex-end;
+  }
+}
+
+// === Octocat ===
+.nes-octocat {
+  $octocat-colors: (#333, #ffdec4, #cb7066);
+  $octocat-1: (
+    (0,0,0,1,0,0,0,0,0,0,0,0,1,0),
+    (0,0,0,1,1,0,0,0,0,0,0,1,1,0),
+    (0,0,0,1,1,1,1,1,1,1,1,1,1,0),
+    (0,0,1,1,1,1,1,1,1,1,1,1,1,1),
+    (0,0,1,1,1,1,1,1,1,1,1,1,1,1),
+    (0,0,1,1,1,2,2,2,2,2,2,1,1,1),
+    (0,0,1,1,2,3,2,2,2,2,3,2,1,1),
+    (0,0,1,1,2,3,2,2,2,2,3,2,1,1),
+    (0,0,0,1,1,2,2,3,3,2,2,1,1,0),
+    (1,1,0,0,0,0,1,1,1,1,0,0,0,0),
+    (0,0,1,1,0,1,1,1,1,1,1,0,0,0),
+    (0,0,0,1,1,1,1,1,1,1,1,1,0,0,0),
+    (0,0,0,0,0,1,0,1,1,0,1,0,0,0),
+    (0,0,0,0,0,1,0,1,1,0,1,0,0,0),
+    (0,0,0,0,1,0,1,0,0,1,0,1,0,0)
+  );
+  $octocat-2: (
+    (0,0,0,1,0,0,0,0,0,0,0,0,1,0),
+    (0,0,0,1,1,0,0,0,0,0,0,1,1,0),
+    (0,0,0,1,1,1,1,1,1,1,1,1,1,0),
+    (0,0,1,1,1,1,1,1,1,1,1,1,1,1),
+    (0,0,1,1,1,1,1,1,1,1,1,1,1,1),
+    (0,0,1,1,1,2,2,2,2,2,2,1,1,1),
+    (0,0,1,1,2,2,2,2,2,2,2,2,1,1),
+    (0,1,1,1,2,3,2,2,2,2,3,2,1,1),
+    (0,1,0,1,1,2,2,3,3,2,2,1,1,0),
+    (0,0,1,0,0,0,1,1,1,1,0,0,0,0),
+    (0,0,0,1,0,1,1,1,1,1,1,0,0,0),
+    (0,0,0,1,1,1,1,1,1,1,1,0,0,0),
+    (0,0,0,0,0,1,0,1,1,0,1,0,0,0),
+    (0,0,0,0,0,1,0,1,1,0,1,0,0,0),
+    (0,0,0,0,1,0,1,0,0,1,0,1,0,0)
+  );
+
+  $size: 6px;
+  position: relative;
+  display: inline-block;
+  width: $size * list.length(list.nth($octocat-1, 1));
+  height: $size * list.length($octocat-1);
+
+ 
+  @keyframes wave {
+    50% {
+      @include pixelize($size, $octocat-2, $octocat-colors);
+    }
+  }
+}
+
+
+.nes-balloon {
+  display: inline-block;
+  position: relative;
+
+  font-size: 0.7rem;
+  color: #333;
+  background: #fff;
+  padding: 0.5rem 1.5rem;
+    margin: 8px;
+    margin-bottom: 30px;
+
+}

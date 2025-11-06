@@ -1,0 +1,134 @@
+/* 整体布局与背景 */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+.meow-main {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.meow-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* 上方部分 */
+.meow-up {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 85px;
+}
+
+.meow-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.meow-video {
+  width: 100%;
+  max-width: 650px;
+  min-width: 440px;
+
+}
+
+/* 右侧 */
+.meow-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.meow-right h2 {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+/* 概览块 */
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+  background: #fff !important;
+}
+
+.overview-box p {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 带框的 info box */
+.info-box {
+  border: 3px solid #212529;
+  box-shadow: 3px 3px 0 #212529;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #212529;
+  font-size: 1.4rem;
+  font-family: monospace;
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 25px;
+  line-height: 1.8;
+  color: #222;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-box button {
+  margin-top: 20px;
+}
+
+/* 按钮卡片调整 */
+.buttonCardMeowDetial {
+      margin-top: 0px;
+    width: 443px;
+    max-width: 100%;
+   justify-content: center;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .meow-up {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meow-video {
+    max-width: 300px;
+  }
+
+  .meow-right {
+    text-align: center;
+  }
+
+  .info-box {
+    font-size: 12px;
+  }
+
+  .buttonCardMeowDetial {
+    width: 100%;
+  }
+}
