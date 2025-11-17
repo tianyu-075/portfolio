@@ -61,7 +61,7 @@ export default function MeowMeowFightDetail() {
             </div>
           </div>
 
-          {/* 技术栈 */}
+
           <div className="info-box nes-container is-rounded">
             <h3>⚙️ Tech Stack</h3>
             <ul className="nes-list is-disc">
@@ -73,7 +73,7 @@ export default function MeowMeowFightDetail() {
             </ul>
           </div>
 
-          {/* 核心功能 */}
+
           <div className="info-box nes-container is-rounded">
             <h3>🌟 Core Features</h3>
             <ul className="nes-list is-circle">
