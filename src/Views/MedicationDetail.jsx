@@ -1,6 +1,6 @@
 import React from "react";
 import "./MedicationDetail.css";
-import portfolioVideo from "../assets/medi-game.mp4";
+import portfolioVideo from "../assets/medi.mp4";
 import { ButtonCard } from "../Components/ButtonCard";
 import ForkmeCard from "../Components/ForkmeCard";
 
@@ -47,11 +47,11 @@ The app focuses on simplicity, efficiency, and real-world usability, featuring s
               </div>
 
               <ButtonCard
-                className="buttonCardMeowDetial"
-                title="MeowMeowFright Live Site"
-                description="Click to explore MeowMeowFright"
+                className="buttonCardMeowDetail"
+                title="snyo on App Store"
+                description="Click to check out Syno"
                 onClick={() =>
-                  window.open("https://catmon-vert.vercel.app/", "_blank")
+                  window.open("https://apps.apple.com/es/app/syno/id6754502303?l=en-GB", "_blank")
                 }
               />
             </div>
