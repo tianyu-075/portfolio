@@ -31,7 +31,7 @@ export default function MeowMeowFightDetail() {
 
               <ForkmeCard
                 title={"Fork me\nOn GitHub"}
-                link="https://github.com/your-username"
+                link="https://github.com/tianyu-075/catmon"
                 className="my-fork-card"
               />
 
