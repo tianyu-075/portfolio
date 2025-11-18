@@ -264,6 +264,7 @@ html, body {
   position: relative;
   padding: 0 2vw;
   box-sizing: border-box;
+  margin-bottom: 10vw;
 }
 
 /* Left Side */
@@ -287,15 +288,15 @@ html, body {
   width: 25vw;       
   max-width: 400px;  
   height: 20vw;      
-  max-height: 320px; /* 最大高度 */
+  max-height: 320px; 
   z-index: 10;
-  font-size: calc(0.8vw + 10px); /* 字体随宽度缩放 */
+  font-size: calc(0.8vw + 10px); 
 }
 
 /* Right Side */
 .project3-right {
   position: relative;
-  width: 25vw; /* 1/4 屏幕宽 */
+  width: 25vw; 
   height: auto;
 }
 
@@ -310,10 +311,10 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25vw;        
-  max-width: 200px;   
-  height: 15vw;       
-  max-height: 120px;  
+  width: 26vw;       
+  max-width: 340px;   
+  height: 13vw;       
+  max-height: 261px;  
   z-index: 10;
   font-size: calc(0.7vw + 8px); 
 }

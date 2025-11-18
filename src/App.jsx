@@ -218,7 +218,7 @@ function App() {
                 <div className="project3-left">
                   <img
                     className="project3-bigImage"
-                    src="/src/assets/yourBigImage.jpg"
+                    src="/src/assets/syno.png"
                     alt="Big Left"
                   />
                   <ButtonCard
@@ -231,14 +231,14 @@ function App() {
                 <div className="project3-right">
                   <img
                     className="project3-smallImage"
-                    src="/src/assets/yourSmallImage.jpg"
+                    src="/src/assets/synoapp.png"
                     alt="Small Right"
                   />
                   <ButtonCard
                     className="buttonCardMedicationSmall"
-                    title="Learn More"
-                    description="Click to explore Medication projects"
-                    onClick={() => setCurrentPage('medication')}
+                    title="More..."
+                    description="Click to App Store page"
+                    onClick={() => window.open('https://apps.apple.com/es/app/syno/id6754502303?l=en-GB', '_blank')}
                   />
                 </div>
               </div>
