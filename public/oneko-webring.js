@@ -1,4 +1,5 @@
-// oneko.js: https://github.com/adryd325/oneko.js
+
+// oneko.js: https://github.com/adryd325/oneko.js (webring variant)
 
 (function oneko() {
     const isReducedMotion =
@@ -14,6 +15,57 @@
   
     let mousePosX = 0;
     let mousePosY = 0;
+  
+    // please use data-neko="true" on your A elements that link to another site with oneko-webring.js instead of this
+    // this is deprecated and will eventually be removed
+    const nekoSites = [
+      "localhost",
+    ];
+  
+    try {
+      const searchParams = location.search
+        .replace("?", "")
+        .split("&")
+        .map((keyvaluepair) => keyvaluepair.split("="));
+      // This is so much repeated code, I don't like it
+      tmp = searchParams.find((a) => a[0] == "catx");
+      if (tmp && tmp[1]) nekoPosX = parseInt(tmp[1]);
+      tmp = searchParams.find((a) => a[0] == "caty");
+      if (tmp && tmp[1]) nekoPosY = parseInt(tmp[1]);
+      tmp = searchParams.find((a) => a[0] == "catdx");
+      if (tmp && tmp[1]) mousePosX = parseInt(tmp[1]);
+      tmp = searchParams.find((a) => a[0] == "catdy");
+      if (tmp && tmp[1]) mousePosY = parseInt(tmp[1]);
+    } catch (e) {
+      console.error("oneko.js: failed to parse query params.");
+      console.error(e);
+    }
+  
+    function onClick(event) {
+      const target = event.target.closest("A");
+      if (target === null || !target.getAttribute("href")) {
+        return;
+      }
+  
+      let newLocation;
+      try {
+        newLocation = new URL(target.href);
+      } catch (e) {
+        return;
+      }
+      if (
+        (nekoSites.includes(newLocation.host) && newLocation.pathname == "/") ||
+        target.dataset.neko
+      ) {
+        newLocation.searchParams.append("catx", Math.floor(nekoPosX));
+        newLocation.searchParams.append("caty", Math.floor(nekoPosY));
+        newLocation.searchParams.append("catdx", Math.floor(mousePosX));
+        newLocation.searchParams.append("catdy", Math.floor(mousePosY));
+        event.preventDefault();
+        window.location.href = newLocation.toString();
+      }
+    }
+    document.addEventListener("click", onClick);
   
     let frameCount = 0;
     let idleTime = 0;
@@ -94,9 +146,9 @@
       nekoEl.style.imageRendering = "pixelated";
       nekoEl.style.left = `${nekoPosX - 16}px`;
       nekoEl.style.top = `${nekoPosY - 16}px`;
-      nekoEl.style.zIndex = 2147483647;
+      nekoEl.style.zIndex = Number.MAX_VALUE;
   
-      let nekoFile = "./oneko.gif"
+      let nekoFile = "/oneko.gif"
       const curScript = document.currentScript
       if (curScript && curScript.dataset.cat) {
         nekoFile = curScript.dataset.cat
@@ -127,6 +179,7 @@
         lastFrameTimestamp = timestamp
         frame()
       }
+  
       window.requestAnimationFrame(onAnimationFrame);
     }
   
@@ -237,3 +290,4 @@
   
     init();
   })();
+  
