@@ -49,7 +49,7 @@ export default function PortfolioDetail() {
     </div>
   </div>
 </div>
-          {/* 下方: 技术、特性、挑战、联系方式 */}
+        
        <div className="info-box nes-container is-rounded">
   <h3>⚙️ Tech Stack</h3>
   <div className="lists">
