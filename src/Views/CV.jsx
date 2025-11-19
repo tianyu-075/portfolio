@@ -13,7 +13,7 @@ const CV = () => {
 
         <div className={styles["left-side"]}>
           <img
-            src="/IMG_4835.jpg"
+            src="/IMG_4835.JPG"
             alt="Tianyu He"
             className={styles["profile-pic"]}
           />
