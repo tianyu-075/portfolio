@@ -187,7 +187,7 @@ function App() {
                 />
                 <ButtonCard
                   className="buttonCardPortfolio"
-                  title="Learn more about developer Tianyu"
+                  title="Learn more about Tianyu"
                   description="Click to check Tianyu CV"
                   onClick={() => setCurrentPage('cv')}
                 />
@@ -203,8 +203,8 @@ function App() {
                   />
                   <ButtonCard
                     className="buttonCardMeow"
-                    title="View MeowMeowFight Details"
-                    description="Click to explore detailed MeowMeowFight projects"
+                    title="MeowMeowFight"
+                    description="Click to explore MeowMeowFight in detail"
                     onClick={() => setCurrentPage('meowmeow')}
                   />
                   <div className="centerp">
@@ -223,8 +223,8 @@ function App() {
                   />
                   <ButtonCard
                     className="buttonCardMedication"
-                    title="View Mobile App Syno Details"
-                    description="Click to explore detailed Syno projects"
+                    title="Syno | A Medication Reminder Mobile App"
+                    description="Click to explore Syno in detail"
                     onClick={() => setCurrentPage('medication')}
                   />
                 </div>
@@ -237,7 +237,7 @@ function App() {
                   <ButtonCard
                     className="buttonCardMedicationSmall"
                     title="Download Syno"
-                    description="Click to App Store page"
+                    description="Go to App Store"
                     onClick={() => window.open('https://apps.apple.com/es/app/syno/id6754502303?l=en-GB', '_blank')}
                   />
                   <div className="centerp">A mobile medication reminder app built with React Native and Node.js, allowing users to schedule medications, receive notifications, and track their history.</div>
@@ -254,7 +254,7 @@ function App() {
                 <ButtonCard
                   className="buttonCardPortfolio"
                   title="View Portfolio Details"
-                  description="Click to explore detailed portfolio projects"
+                  description="Click to explore portfolio projects in detail"
                   onClick={() => setCurrentPage('portfolio')}
                 />
               </div>
