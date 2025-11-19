@@ -14,7 +14,7 @@ export default function MeowMeowFightDetail() {
       <main className="meow-main">
         <div className="meow-container">
 
-          {/* 上方 */}
+      
           <div className="meow-up nes-container is-rounded no-border">
             <div className="meow-left">
               <video
