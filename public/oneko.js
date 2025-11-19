@@ -101,7 +101,7 @@
       nekoEl.style.top = `${nekoPosY - 16}px`;
       nekoEl.style.zIndex = "9999";
 
-      let nekoFile = "/src/assets/oneko.gif";
+      let nekoFile = "/oneko.gif";
       nekoEl.style.backgroundImage = `url('${nekoFile}')`;
 
       document.body.appendChild(nekoEl);
