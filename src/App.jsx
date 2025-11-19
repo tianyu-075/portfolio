@@ -182,7 +182,7 @@ function App() {
               <div id="about" className="cvcontainer">
                 <img
                   className="codinganime-gif"
-                  src="/src/assets/coding-anime.gif"
+                  src="/coding-anime.gif"
                   alt="coding"
                 />
                 <ButtonCard
@@ -198,7 +198,7 @@ function App() {
                 <div className="center-container">
                   <img
                     className="center-img"
-                    src="/src/assets/catmon.jpg"
+                    src="/catmon.jpg"
                     alt="Catmon"
                   />
                   <ButtonCard
@@ -218,7 +218,7 @@ function App() {
                 <div className="project3-left">
                   <img
                     className="project3-bigImage"
-                    src="/src/assets/syno.png"
+                    src="/syno.png"
                     alt="Big Left"
                   />
                   <ButtonCard
@@ -231,7 +231,7 @@ function App() {
                 <div className="project3-right">
                   <img
                     className="project3-smallImage"
-                    src="/src/assets/synoapp.png"
+                    src="/synoapp.png"
                     alt="Small Right"
                   />
                   <ButtonCard
@@ -248,7 +248,7 @@ function App() {
               <div className="image-container">
                 <img
                   className="hadouken-gif"
-                  src="/src/assets/wwwnami.jpg"
+                  src="/wwwnami.jpg"
                   alt="Hadouken"
                 />
                 <ButtonCard
@@ -267,7 +267,7 @@ function App() {
 
   <div className="contact-left">
     <img className="tenor-gif-embed"
-                    src="/src/assets/anime-girl-wave.gif"
+                    src="/anime-girl-wave.gif"
                     
                   />
       

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CV.module.css";
-import DownloadCVButton from "../components/DownloadCVButton"
+import DownloadCVButton from "../Components/DownloadCVButton"
 
 
 const CV = () => {
@@ -13,7 +13,7 @@ const CV = () => {
 
         <div className={styles["left-side"]}>
           <img
-            src="/src/assets/IMG_4835.jpg"
+            src="/IMG_4835.jpg"
             alt="Tianyu He"
             className={styles["profile-pic"]}
           />

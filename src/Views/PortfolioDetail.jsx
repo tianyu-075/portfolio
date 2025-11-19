@@ -18,7 +18,7 @@ export default function PortfolioDetail() {
   <div className="portfolio-left">
     <img
       className="portfolio-video"
-      src="/src/assets/balck.png"
+      src="/balck.png"
       alt="portfolio preview"
     />
   </div>
