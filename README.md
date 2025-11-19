@@ -1,16 +1,42 @@
-# React + Vite
+# Tianyu He — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my **personal portfolio website**: [https://tianyu-075.com/](https://tianyu-075.com/)
 
-Currently, two official plugins are available:
+This website showcases my current **personal projects** and demonstrates my skills in **frontend development** and **interactive web design**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎨 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Pixel Animations** — adds a playful, retro-style aesthetic to the interface  
+- **Oneko Mouse Tracking** — interactive effect where a character follows the cursor  
+- **Project Showcases** — highlights my personal projects with interactive previews  
+- **Responsive Design** — works smoothly on both desktop and mobile devices  
 
-## Expanding the ESLint configuration
+This website is designed to combine **creative animation techniques** with modern **React-based development**, providing visitors with an engaging and dynamic browsing experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Tech Stack
+
+- **Frontend:** React + CSS/SCSS  
+- **Animations & Effects:** Pixel animations, Oneko mouse tracking  
+- **Deployment:** Vercel / GitHub Pages  
+- **State Management:** React Context API (if used)  
+
+---
+
+## 💻 How to Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/tianyu-075/portfolio.git
+
+# Move into the project directory
+cd portfolio
+
+# Install dependencies
+npm install  # or yarn install
+
+# Start the development server
+npm start
