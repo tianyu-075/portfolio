@@ -28,7 +28,7 @@ export default function PortfolioDetail() {
 
     <ForkmeCard
       title={"Fork me\nOn GitHub"}
-      link="https://github.com/your-username"
+      link="https://github.com/tianyu-075/portfolio"
       className="my-fork-card"
     />
 
