@@ -35,11 +35,7 @@ const CV = () => {
           <section className={styles["about-me"]} id="about">
             <h3>About Me</h3>
             <p>
-              I am a passionate software engineer skilled in building full-stack
-              web and mobile applications using modern technologies such as
-              React, Node.js, JavaScript, and MongoDB. My journey began with a
-              curiosity about solving real-world problems and evolved into a
-              love for crafting user-centric digital experiences.
+              I’m a software engineer who loves building things that feel smooth, intuitive, and actually useful. I work mainly with React, Node.js, JavaScript, and MongoDB to create full-stack web and mobile applications. What started as a simple curiosity about fixing everyday problems gradually turned into a passion for turning ideas into real, polished digital experiences.
             </p>
             <p>
               I enjoy working collaboratively and tackling complex challenges

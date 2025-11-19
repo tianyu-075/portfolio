@@ -70,7 +70,7 @@ function App() {
   const [isTyping, setIsTyping] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
-  const fullText = 'hello,i am Tianyu,full stack developer';
+  const fullText = 'hello, i am Tianyu, a full stack developer';
 
 
   useEffect(() => {
@@ -187,7 +187,7 @@ function App() {
                 />
                 <ButtonCard
                   className="buttonCardPortfolio"
-                  title="Know more about developer Tianyu"
+                  title="Learn more about developer Tianyu"
                   description="Click to check Tianyu CV"
                   onClick={() => setCurrentPage('cv')}
                 />
@@ -203,7 +203,7 @@ function App() {
                   />
                   <ButtonCard
                     className="buttonCardMeow"
-                    title="View MeowMeowFright Details"
+                    title="View MeowMeowFight Details"
                     description="Click to explore detailed MeowMeowFight projects"
                     onClick={() => setCurrentPage('meowmeow')}
                   />
@@ -223,8 +223,8 @@ function App() {
                   />
                   <ButtonCard
                     className="buttonCardMedication"
-                    title="View Medication Details"
-                    description="Click to explore Medication projects"
+                    title="View Mobile App Syno Details"
+                    description="Click to explore detailed Syno projects"
                     onClick={() => setCurrentPage('medication')}
                   />
                 </div>
@@ -236,10 +236,11 @@ function App() {
                   />
                   <ButtonCard
                     className="buttonCardMedicationSmall"
-                    title="More..."
+                    title="Download Syno"
                     description="Click to App Store page"
                     onClick={() => window.open('https://apps.apple.com/es/app/syno/id6754502303?l=en-GB', '_blank')}
                   />
+                  <div className="centerp">A mobile medication reminder app built with React Native and Node.js, allowing users to schedule medications, receive notifications, and track their history.</div>
                 </div>
               </div>
 

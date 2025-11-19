@@ -203,8 +203,7 @@ html, body {
 
 
 .centerp {
-  margin-top: auto;        
-  width: 450px;
+  margin-top: 10px;
   font-size: 16px;
   color: #333;
   font-family:"Ubuntu", "Microsoft JhengHei", sans-serif;;

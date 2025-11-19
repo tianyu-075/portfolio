@@ -13,7 +13,7 @@ export default function PortfolioDetail() {
       <main className="portfolio-main">
         <div className="portfolio-container">
 
-         {/* 上方: */}
+        
 <div className="portfolio-up nes-container is-rounded no-border">
   <div className="portfolio-left">
     <img

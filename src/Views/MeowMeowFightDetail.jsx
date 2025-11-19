@@ -51,9 +51,9 @@ export default function MeowMeowFightDetail() {
               </div>
 
               <ButtonCard
-                className="buttonCardMeowDetial"
-                title="MeowMeowFright Live Site"
-                description="Click to explore MeowMeowFright"
+                className="buttonCardMeowDetail"
+                title="MeowMeowFight Live Site"
+                description="Click to explore MeowMeowFight"
                 onClick={() =>
                   window.open("https://catmon-vert.vercel.app/", "_blank")
                 }
