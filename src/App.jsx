@@ -6,6 +6,7 @@ import PortfolioDetail from './Views/PortfolioDetail';
 import MeowMeowFightDetail from './Views/MeowMeowFightDetail';
 import MedicationDetail from "./Views/MedicationDetail";
 import CV from "./Views/CV";
+import { useScrollToTop } from './hooks/useScrollToTop';
 
 
 function Footer() {
@@ -71,6 +72,9 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
   const fullText = 'hello, i am Tianyu, a full stack developer';
+
+  // Scroll to top when page changes
+  useScrollToTop([currentPage]);
 
 
   useEffect(() => {

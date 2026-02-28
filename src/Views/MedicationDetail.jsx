@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MedicationDetail.css";
 import portfolioVideo from "../assets/medi.mp4";
 import { ButtonCard } from "../Components/ButtonCard";
 import ForkmeCard from "../Components/ForkmeCard";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 export default function MedicationDetail() {
   const navigateBack = () => {
-    window.location.reload();
+    window.history.back();
   };
+
+  // Scroll to top when component mounts
+  useScrollToTop([]);
 
   return (
     <div className="meow-page nes-container is-light">

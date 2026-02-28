@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./CV.module.css";
 import DownloadCVButton from "../Components/DownloadCVButton"
-
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const CV = () => {
+  // Scroll to top when component mounts
+  useScrollToTop([]);
   return (
     <div className={styles["cv-container"]}>
       
